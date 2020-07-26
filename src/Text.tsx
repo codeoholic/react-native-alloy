@@ -5,30 +5,39 @@ import { StyleSheet, Text, TextStyle } from 'react-native';
 export type AlloyText = React.ComponentPropsWithRef<typeof Text> & {
   heavy?: boolean;
   bold?: boolean;
-  // fontWeight?: TextStyle;
+  fontSize?: number;
+  italic?: boolean;
 };
 
 export const AlloyText = forwardRef(
   (
     props: AlloyText & { children: React.ReactNode },
-    ref: React.Ref<AlloyText>
+    ref: React.Ref<Text>
   ) => {
     const { style } = props;
-    let fontWeights: TextStyle = { fontWeight: '400' };
+    let fontWeight: TextStyle = { fontWeight: '400' };
+    let fontSize: TextStyle = { fontSize: 16 };
+    let fontStyle: TextStyle = { fontStyle: 'normal' };
     if (props.bold) {
-      fontWeights = { fontWeight: '700' };
+      fontWeight = { fontWeight: '700' };
     } else if (props.heavy) {
-      fontWeights = { fontWeight: '900' };
+      fontWeight = { fontWeight: '900' };
     } else {
-      fontWeights = { fontWeight: '400' };
+      fontWeight = { fontWeight: '400' };
+    }
+    if (props.italic) {
+      fontStyle = { fontStyle: 'italic' }
+    }
+    if(props.fontSize) {
+      fontSize = { fontSize: props.fontSize }
     }
     return (
-      <AlloyText
+      <Text
         {...(ref ? { ref } : {})}
-        style={[styles.text, style, fontWeights]}
+        style={[styles.text, style, fontWeight, fontStyle, fontSize]}
       >
         {props.children}
-      </AlloyText>
+      </Text>
     );
   }
 );
@@ -36,6 +45,5 @@ export const AlloyText = forwardRef(
 const styles = StyleSheet.create({
   text: {
     color: '#222226',
-    fontSize: 16,
   },
 });
