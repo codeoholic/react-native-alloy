@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-alloy": ["./src/index"]
+      "@codeoholic/react-native-alloy": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
