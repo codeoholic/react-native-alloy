@@ -1,5 +1,4 @@
-export default {
-  multiply(a: number, b: number) {
-    return Promise.resolve(a * b);
-  },
-};
+import { AlloyButton } from "./Button";
+import { AlloyText } from "./Text";
+
+export { AlloyButton, AlloyText };
