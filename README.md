@@ -5,17 +5,19 @@ Making React Native components better.
 ## Installation
 
 ```sh
-npm install react-native-alloy
+npm install --save @codeoholic/react-native-alloy@0.1.0
 ```
 
 ## Usage
 
 ```js
-import Alloy from "react-native-alloy";
+import { AlloyText } from 'react-native-alloy';
 
 // ...
 
-const result = await Alloy.multiply(3, 7);
+<AlloyText heavy={false} bold={true}>
+	Result is
+</AlloyText>
 ```
 
 ## Contributing

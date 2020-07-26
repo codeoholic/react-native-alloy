@@ -1,6 +1,6 @@
 {
-  "name": "react-native-alloy",
-  "version": "0.1.0",
+  "name": "@codeoholic/react-native-alloy",
+  "version": "0.1.1",
   "description": "Making React Native components better.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
