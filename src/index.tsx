@@ -1,4 +1,3 @@
-import { AlloyButton } from "./Button";
-import { AlloyText } from "./Text";
+import { AlloyText } from './Text';
 
-export { AlloyButton, AlloyText };
+export { AlloyText };

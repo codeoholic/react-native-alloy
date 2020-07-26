@@ -34,7 +34,7 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/codeoholic/react-native-alloy",
+  "repository": "git://github.com/codeoholic/react-native-alloy.git",
   "author": "codeoholic <mohit.tyagi@protonmail.com> (https://github.com/codeoholic)",
   "license": "MIT",
   "bugs": {
@@ -128,7 +128,10 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "es5",
-    "useTabs": false
+    "useTabs": false,
+    "options": {
+      "fix": true
+    }
   },
   "@react-native-community/bob": {
     "source": "src",
@@ -138,5 +141,6 @@
       "module",
       "typescript"
     ]
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
