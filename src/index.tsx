@@ -1,3 +1,4 @@
 import { AlloyText } from './Text';
+import { AlloyView } from './View';
 
-export { AlloyText };
+export { AlloyText, AlloyView };

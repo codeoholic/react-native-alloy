@@ -29,8 +29,6 @@ export const AlloyText = forwardRef(
       fontWeight = { fontWeight: '700' };
     } else if (props.heavy) {
       fontWeight = { fontWeight: '900' };
-    } else {
-      fontWeight = { fontWeight: '400' };
     }
     if (props.italic) {
       fontStyle = { fontStyle: 'italic' };
@@ -56,7 +54,17 @@ export const AlloyText = forwardRef(
     return (
       <Text
         {...(ref ? { ref } : {})}
-        style={[fontWeight, fontStyle, fontSize, fontColor, marginLeft, marginRight, marginTop, marginBottom, style]}
+        style={[
+          fontWeight,
+          fontStyle,
+          fontSize,
+          fontColor,
+          marginLeft,
+          marginRight,
+          marginTop,
+          marginBottom,
+          style,
+        ]}
       >
         {props.children}
       </Text>

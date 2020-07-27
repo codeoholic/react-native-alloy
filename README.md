@@ -1,17 +1,17 @@
-# react-native-alloy
+# @codeoholic/react-native-alloy
 
 Making React Native components better.
 
 ## Installation
 
 ```sh
-npm install --save @codeoholic/react-native-alloy@0.1.3
+npm install --save @codeoholic/react-native-alloy
 ```
 
 ## Usage
 
 ```js
-import { AlloyText } from '@codeoholic/react-native-alloy';
+import { AlloyText, AlloyView } from '@codeoholic/react-native-alloy';
 
 // ...
 
@@ -34,6 +34,10 @@ import { AlloyText } from '@codeoholic/react-native-alloy';
 <AlloyText marginTop={10}>marginTop: 10</AlloyText>
 <AlloyText marginBottom={10}>marginBottom: 10</AlloyText>
 <AlloyText marginRight={10}>marginRight: 10</AlloyText>
+
+<AlloyView marginLeft={20} backgroundColor={"#F35F4D"} padding={20} height={200} borderWidth={1} borderBottomLeftRadius={50} borderColor={'#dedede'} paddingTop={0} borderRadius={10}>
+  <AlloyText fontSize={36} fontColor={"#fff"}>hello</AlloyText>
+</AlloyView>
 ```
 
 ## Contributing
